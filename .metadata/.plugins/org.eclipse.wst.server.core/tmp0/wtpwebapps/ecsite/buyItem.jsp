@@ -110,7 +110,7 @@
             </s:form>
             <div>
                 <p>前画面に戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
-                <p>マイページは<a href='<s:url action="MyPageAction"/>'></a>
+                <p>マイページは<a href='<s:url action="MyPageAction"/>'>こちら</a></p>
             </div>
         </div>
     </div>
