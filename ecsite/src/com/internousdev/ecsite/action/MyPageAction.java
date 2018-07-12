@@ -32,6 +32,9 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		String result = SUCCESS;
 		return result;
 	}
+	public Map<String, Object> getSession() {
+		return session;
+	}
 	public void delete() throws SQLException{
 		String item_transaction_id = session.get("id").toString();
 		String user_master_id = session.get("login_user_id").toString();
@@ -41,6 +44,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		if(res > 0){
 			myPageList = null;
 			setMessage("商品情報を正しく削除しました。");
+		} else if(res == 0){
 			setMessage("商品情報の削除に失敗しました。");
 		}
 	}
@@ -51,8 +55,11 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
-	public ArrayList<MyPageDTO>getMyPageList(){
+	public ArrayList<MyPageDTO> getMyPageList(){
 		return this.myPageList;
+	}
+	public void setMyPageList(ArrayList<MyPageDTO> myPageList){
+		this.myPageList = myPageList;
 	}
 	public String getMessage(){
 		return this.message;

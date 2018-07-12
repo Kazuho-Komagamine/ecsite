@@ -37,7 +37,7 @@ public class MyPageDTO {
 	public String getUserName(){
 		return userName;
 	}
-	public void setUseerName(String userName){
+	public void setUserName(String userName){
 		this.userName = userName;
 	}
 	public String getId(){

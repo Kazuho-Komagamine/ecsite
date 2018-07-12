@@ -50,10 +50,18 @@
         }
 
     </style>
-    <script type="text/javascript">
+	<script>
         function submitAction(url){
         	$('form').attr('action',url);
         	$('form').submit();
+        }
+
+        function goHomeAction(){
+        	document.getElementById('form').action="HomeAction";
+        }
+
+        function goBuyItemConfirmAction(){
+        	document.getElementById('form').action="BuyItemConfirmAction";
         }
     </script>
 </head>
@@ -67,7 +75,7 @@
             <p>BuyItemConfirm</p>
         </div>
         <div>
-            <s:form name="BuyItemConfirmAction">
+            <s:form action="HomeAction" id="form">
                 <tr>
                     <td>商品名</td>
                     <td><s:property value="session.buyItem_name"/></td>
@@ -88,11 +96,14 @@
                     <td><br></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="戻る"
-                    onclick="submitAction('buyItemAction')"/></td>
-                    <td><input type="button" value="完了"
-                    onclick="submitAction('buyItemConfirmAction')"/></td>
+	                <td><input type="submit" value="戻る" onclick="goHomeAction();"/></td>
+                    <td><input type="submit" value="完了" onclick="goBuyItemConfirmAction();"/></td>
+                <!--
+                    <td><input type="submit" value="戻る" onclick="submitAction('HomeAction')"/></td>
+                    <td><input type="submit" value="完了" onclick="submitAction('BuyItemConfirmAction')"/></td>
+                -->
                 </tr>
+
             </s:form>
         </div>
     </div>

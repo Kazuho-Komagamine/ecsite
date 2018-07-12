@@ -98,7 +98,7 @@
                     </td>
                     <td>
                         <input type="radio" name="pay" value="1" checked="checked">現金
-                        <input type="radio" name="pay" value="1">クレジットカード
+                        <input type="radio" name="pay" value="2">クレジットカード
                     </td>
                 </tr>
                 <tr>
