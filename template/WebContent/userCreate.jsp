@@ -16,7 +16,7 @@
 body{
     margin: 0;
     padding: 0;
-    line-height; 1.6;
+    line-height: 1.6;
     letter-spacing: 1px;
     font-family: Verdana, Helvetica, sans-serif;
     font-size: 12px;
@@ -68,7 +68,7 @@ table {
                 <s:property value="errorMessage" escape="false"/>
             </s:if>
             <table>
-            <s:form action="UserCreateAction">
+            <s:form action="UserCreateConfirmAction">
                 <tr>
                     <td>
                         <label>ログインID:</label>

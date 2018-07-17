@@ -97,6 +97,15 @@ table {
                 </tr>
                 <tr>
                     <td>
+                        <span>値段</span>
+                    </td>
+                    <td>
+                        <input type="radio" name="pay" value="1" checked="checked">現金払い
+                        <input type="radio" name="pay" value="2">クレジットカード
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <s:submit value="購入"/>
                     </td>
                 </tr>
