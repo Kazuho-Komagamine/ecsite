@@ -12,6 +12,7 @@
     <meta name="keywords" content=""/>
     <title>MyPage画面</title>
     <link rel="stylesheet" href="./css/style.css"/>
+    <script type="text/javascript" src="js/template.js"></script>
     <script type="text/javascript">
     function check(){
         if(window.confirm('購入履歴を削除してもよろしいですか?\nこの操作は元に戻せません。')){
@@ -25,10 +26,7 @@
     </script>
 </head>
 <body>
-    <div id="header">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="header.jsp" />
     <div id="main">
         <s:if test="myPageList == null">
             <h3>ご購入情報はありません</h3>
@@ -66,9 +64,6 @@
             <p>ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
         </div>
     </div>
-    <div id="footer">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="footer.jsp" />
 </body>
 </html>

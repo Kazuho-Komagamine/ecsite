@@ -12,12 +12,10 @@
     <meta name="keywords" content=""/>
     <title>Login画面</title>
     <link rel="stylesheet" href="./css/style.css"/>
+    <script type="text/javascript" src="js/template.js"></script>
 </head>
 <body>
-    <div id="header">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="header.jsp" />
     <div id="main">
         <div id="top">
             <p>Login</p>
@@ -39,9 +37,6 @@
 
         </div>
     </div>
-    <div id="footer">
-        <div id="pr">
-        </div>
-    </div>
+    <script type="text/javascript">footer();</script>
 </body>
 </html>

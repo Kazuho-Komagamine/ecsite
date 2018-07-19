@@ -1,0 +1,11 @@
+/**
+ * 全ページ共通のブロックを記述する
+ */
+
+function footer(){
+	var html = "";
+	html += '<div id="footer">';
+	html += '<div id="pr"></div>';
+	html += '</div>';
+	document.write(html);
+}

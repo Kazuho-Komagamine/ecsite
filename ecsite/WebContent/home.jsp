@@ -12,12 +12,10 @@
     <meta name="keywords" content=""/>
     <title>Home画面</title>
     <link rel="stylesheet" href="./css/style.css"/>
+    <script type="text/javascript" src="js/template.js"></script>
 </head>
 <body>
-    <div id="header">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="header.jsp" />
     <div id="main">
         <div id="top">
             <p>Home</p>
@@ -33,9 +31,6 @@
         </div>
         <div>メモ:User登録でキー重複したときに、エラーじゃなくて警告メッセージを表示する</div>
     </div>
-    <div id="footer">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="footer.jsp" />
 </body>
 </html>

@@ -410,3 +410,6 @@
 0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:49:33 +0900] "POST /ecsite/HomeAction.action HTTP/1.1" 200 2945
 0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:49:34 +0900] "GET /ecsite/MyPageAction.action HTTP/1.1" 200 2995
 0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:49:48 +0900] "GET /ecsite/GoHomeAction.action HTTP/1.1" 200 1375
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:55:00 +0900] "GET /ecsite/LogoutAction.action HTTP/1.1" 200 1288
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:55:00 +0900] "GET /ecsite/css/style.css HTTP/1.1" 200 807
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:17:55:02 +0900] "POST /ecsite/HomeAction.action;jsessionid=F34E123C253EAC2D930A7A3053906577 HTTP/1.1" 200 1797

@@ -12,12 +12,10 @@
     <meta name="keywords" content=""/>
     <title>UserCreateComplete画面</title>
     <link rel="stylesheet" href="./css/style.css"/>
+    <script type="text/javascript" src="js/template.js"></script>
 </head>
 <body>
-    <div id="header">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="header.jsp" />
     <div id="main">
         <div id="top">
             <p>UserCreateComplete</p>
@@ -30,10 +28,7 @@
         </div>
     </div>
 
-    <div id="footer">
-        <div id="pr">
-        </div>
-    </div>
+    <jsp:include page="footer.jsp" />
 
 </body>
 </html>
