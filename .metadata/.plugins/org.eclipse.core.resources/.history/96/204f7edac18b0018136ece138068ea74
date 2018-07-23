@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+</style>
+<link rel="stylesheet" href="./css/style.css">
+<style type="text/css">
+<!--
+a:link { color:#0000ff; text-decoration:none }
+a:visited { color:#0000ff; text-decoration:none }
+a:hover { color:#0000ff; text-decoration:none }
+a:active { color:#0000ff; text-decoration:none }
+-->
+</style>
+</head>
+<body>
+    <div id="header">
+        <span id="header_title">
+        <!--  ECsite.com -->
+            <a href='<s:url action="GoHomeAction"/>'>
+            <img src="./image/logo.png" alt="ECsite top"></a>
+        </span>
+        <div id="header_menu">
+            <ul>
+                <li>Search</li>
+                <li>
+                    <s:if test="#session.id != null"><a href='<s:url action="GoHomeAction"/>'>MyPage</a></s:if>
+                    <s:if test="#session.id == null"><a href='<s:url action="GoLoginAction"/>'>Login</a></s:if>
+                </li>
+                <li>Cart</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

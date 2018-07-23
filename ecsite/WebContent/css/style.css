@@ -68,3 +68,42 @@ table{
 	font-family: 'Oswald', sans-serif;
     display: inline-block;
 }
+
+#product_list_container{
+	width: 80%;
+	height: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: gray;
+
+}
+
+#wrap{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	padding:0;
+	list-style: none;
+	text-align: center;
+}
+.box1{
+	width:calc(100% / 3);
+	margin: 20px 10px;
+}
+
+#slider_container{
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.vertical-list-table-mini {
+	text-align: left;
+	border-spacing : 30px 4px;
+}
+
+
+
+.submit_btn {
+	float: center;
+}
