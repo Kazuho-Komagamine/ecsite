@@ -1,48 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="Content-Style-Type" content="text/css"/>
-    <meta http-equiv="Content-Script-Type" content="text/javascript"/>
-    <meta http-equiv="imagetoolbar" content="no"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <title>ProductList画面</title>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <script type="text/javascript" src="js/template.js"></script>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css">
+<title>商品一覧</title>
 </head>
 <body>
-    <jsp:include page="header.jsp" />
-    <div id="main">
-        <div id="top">
-            <p>ProductList</p>
+<jsp:include page="header.jsp" />
+<div id="contents">
+    <h1>商品一覧画面</h1>
+    <s:if test="productInfoDtoList==null">
+        <div class="info">
+            検索結果がありません。
         </div>
-        <div id="product_list_container">
-            <ul id="wrap">
-                <li class="box1 a">
-                <a href='<s:url action="ProductDetailsAction">
-	            <s:param name="productId" value="1"/>
-	            </s:url>'><img src="./images/walk_the_plank.jpg" width="300" height="300"/></a>
-	            </li>
-                <li class="box1 b"><img src="./images/awake.jpg" width="300" height="300"/></li>
-                <li class="box1 c"><img src="./images/stories.jpg" width="300" height="300"/></li>
-            </ul>
-            <ul id="wrap">
-                <li class="box1 a"><img src="./images/sikennhousou.png" width="300" height="300"/></li>
-                <li class="box1 b"><img src="./images/nothing_but_the_beat.jpg" width="300" height="300"/></li>
-                <li class="box1 c"><img src="./images/Loser.jpg" width="300" height="300"/></li>
-            </ul>
-            <ul id="wrap">
-                <li class="box1 a"><img src="./images/walk_the_plank.jpg" width="300" height="300"/></li>
-                <li class="box1 b"><img src="./images/walk_the_plank.jpg" width="300" height="300"/></li>
-                <li class="box1 c"><img src="./images/walk_the_plank.jpg" width="300" height="300"/></li>
-            </ul>
-
+    </s:if>
+    <s:else>
+        <div id="product-list">
+            <s:iterator value="#session.productInfoDtoList">
+                <div class="product-list-box">
+                    <ul>
+	                    <li>
+	                        <a href='<s:url action="ProductDetailsAction">
+	                        <s:param name="productId" value="%{productId}"/>
+	                        </s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/></a><br>
+	                        <s:property value="productName"/><br>
+	                        <s:property value="productNameKana"/><br>
+	                        <s:property value="price"/>円<br>
+                        </li>
+                    </ul>
+                </div>
+            </s:iterator>
         </div>
-    </div>
-    <jsp:include page="footer.jsp" />
+        <div class="pager">
+            <s:iterator begin="1" end="#session.totalPageSize" status="pageNo">
+	            <s:if test="#session.currentPageNo == #pageNo.count">
+		        <s:property value="%{#pageNo.count}"/>
+	            </s:if>
+	            <s:else>
+		            <a href="<s:url action='SearchItemAction'><s:param name='pageNo' value='%{#pageNo.count}'/><s:param name='categoryId' value='%{categoryId}'/></s:url> ">	<s:property value="%{#pageNo.count}"/></a>
+	            </s:else>
+            </s:iterator>
+        </div>
+    </s:else>
+</div>
+<s:include value="footer.jsp"/>
 </body>
 </html>

@@ -8,15 +8,14 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 </style>
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/hf_template.css">
 <style type="text/css">
-<!--
-#header a:link { color:white; text-decoration:none }
-#header a:visited { color:white; text-decoration:none }
-#header a:hover { color:red; text-decoration:none }
-#header a:active { color:white; text-decoration:none }
--->
 </style>
+<script type="text/javascript">
+function goSearchItemAction(){
+	document.getElementById("form").action="SearchItemAction";
+}
+</script>
 </head>
 <body>
     <div id="header">
@@ -27,7 +26,14 @@
         </span>
         <div id="header_menu">
             <ul>
-                <li><a href='<s:url action="ProductListAction"/>'>Search</a></li>
+            <s:form id="form">
+                <s:if test='#session.containsKey("mCategoryDtoList")'>
+	                <li><s:select name="categoryId" list="#session.mCategoryDtoList" listValue="categoryName" listKey="categoryId" class="cs-div" id="categoryId"/></li>
+	            </s:if>
+	            <li><a><s:textfield name="keywords" class="txt-keywords" placeholder="検索ワード" /></a></li>
+                <!-- <li><a href='<s:url action="ProductListAction"/>'>Search</a></li> -->
+                <li><a href='<s:submit onclick="goSearchItemAction();"/>'>Search</a></li>
+
                 <li><a href='<s:url action="CartAction"/>'>Cart</a></li>
                 <li>
                     <s:if test="#session.id != null"><a href='<s:url action="LogoutAction"/>'>Logout</a></s:if>
@@ -37,6 +43,7 @@
                     <s:if test="#session.id != null"><a href='<s:url action="MyPageAction"/>'>MyPage</a></s:if>
                     <s:if test="#session.id == null"><a href='<s:url action="GoLoginAction"/>'>Login</a></s:if>
                 </li>
+            </s:form>
             </ul>
         </div>
     </div>

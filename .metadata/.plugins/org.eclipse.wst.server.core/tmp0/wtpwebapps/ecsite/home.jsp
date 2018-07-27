@@ -19,9 +19,8 @@
 
     <script>
         $(document).ready(function(){
-            $('.slider').bxSlider();
+            $('.bxslider').bxSlider();
             auto: true;
-
         });
     </script>
 </head>
@@ -35,23 +34,13 @@
             <h1>New Release</h1>
         </div>
         <div id="slider_container">
-         <div class="slider" id="slider">
-             <div><img src="./images/walk_the_plank.jpg" width="300" height="300"/></div>
-             <div><img src="./images/awake.jpg" width="300" height="300"/></div>
-             <div><img src="./images/stories.jpg" width="300" height="300"/></div>
+             <ul class="bxslider">
+                 <li><img src="./images/walk_the_plank.jpg" width="300" /></li>
+                 <li><img src="./images/awake.jpg" width="300" /></li>
+                 <li><img src="./images/stories.jpg" width="300" /></li>
+             </ul>
          </div>
-         </div>
-        <!--
-        <div id="text-center">
-            <s:form action="HomeAction">
-                <s:submit value="商品購入"/>
-            </s:form>
-            <s:if test="#session.id != null">
-                <p>ログアウトする場合は
-                <a href='<s:url action="LogoutAction"/>'>こちら</a></p>
-            </s:if>
-        </div>
-        -->
+
         <div>メモ:User登録でキー重複したときに、エラーじゃなくて警告メッセージを表示する</div>
     </div>
     <jsp:include page="footer.jsp" />

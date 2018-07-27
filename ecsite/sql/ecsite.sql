@@ -47,7 +47,8 @@ create table product_info(
 id int primary key not null auto_increment comment "ID",
 product_id int unique not null comment "商品ID",
 product_name varchar(100) unique not null comment "商品名",
-product_name_kana varchar(100) not null comment "商品名かな",
+product_name_kana varchar(100) not null comment "商品名カナ",
+product_artist varchar(100) not null comment "アーティスト名",
 product_description varchar(255) not null comment "商品詳細",
 category_id int not null not null comment "カテゴリID",
 price int comment "価格",
@@ -64,7 +65,26 @@ default charset=utf8
 comment="商品情報テーブル"
 ;
 insert into product_info values
-( 1, 1,"CD1","しーでぃー1","アルバム",2,2000,"./images","walk_the_plank.jpg",now(),"スーパーミュージック株式会社",0,now(),now());
+( 1, 1,"CD1","シーディー1","アーティストA","アルバム",2,2000,"./images","CD1.jpg",now(),"Aミュージック株式会社",0,now(),now()),
+( 2, 2,"CD2","シーディー2","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 3, 3,"CD3","シーディー3","アーティストC","アルバム",2,2000,"./images","CD1.jpg",now(),"Cミュージック株式会社",0,now(),now()),
+( 4, 4,"CD4","シーディー4","アーティストD","アルバム",2,2000,"./images","CD1.jpg",now(),"Dミュージック株式会社",0,now(),now()),
+( 5, 5,"CD5","シーディー5","アーティストE","アルバム",2,2000,"./images","CD1.jpg",now(),"Eミュージック株式会社",0,now(),now()),
+( 6, 6,"CD6","シーディー6","アーティストF","アルバム",2,2000,"./images","CD1.jpg",now(),"Fミュージック株式会社",0,now(),now()),
+( 7, 7,"CD7","シーディー7","アーティストG","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 8, 8,"CD8","シーディー8","アーティストH","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 9, 9,"CD9","シーディー9","アーティストI","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 10, 10,"CD10","シーディー10","アーティストJ","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 11, 11,"CD11","シーディー11","アーティストK","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 12, 12,"CD12","シーディー12","アーティストL","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 13, 13,"CD13","シーディー13","アーティストM","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 14, 14,"CD14","シーディー14","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 15, 15,"CD15","シーディー15","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 16, 16,"CD16","シーディー16","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 17, 17,"CD17","シーディー17","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 18, 18,"CD18","シーディー18","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 19, 19,"CD19","シーディー19","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now()),
+( 20, 20,"CD20","シーディー20","アーティストB","アルバム",2,2000,"./images","CD1.jpg",now(),"Bミュージック株式会社",0,now(),now());
 
 create table m_category(
 id int primary key not null comment "ID",

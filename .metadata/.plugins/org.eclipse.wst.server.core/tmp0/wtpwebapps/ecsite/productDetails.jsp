@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/product-details.css">
 <title>商品詳細</title>
 </head>
 <body>
@@ -14,12 +15,13 @@
     <div id="top">
         <p>Product Detail</p>
     </div>
-    <div>
+    <div id="product-detail-container">
         <s:form action="AddCartAction">
 	        <div class="box">
 	            <div class="main_container">
 	                <div class="productImage">
-		                <img src='<s:property value="%{#session.imageFilePath}"/>/<s:property value="%{#session.imageFileName}"/>' class="item-image-box-320"/><br>
+		                <img src='<s:property value="%{#session.imageFilePath}"/>/<s:property value="%{#session.imageFileName}"/>'
+		                class="item-image-box-350"/><br>
 	                </div>
 	                <div id="detail">
 	                    <table class="vertical-list-table-mini">
@@ -47,23 +49,21 @@
 		                         <td>商品詳細情報</td>
 		                         <td><s:property value="%{#session.productDescription}"/></td>
 		                    </tr>
-		                    <tr>
-		                        <th>購入個数</th>
-		                        <td><s:select name="productCount" list="%{#session.productCountList}"/></td>
-		                    </tr>
 		                </table>
-	                </div>
-	                <s:hidden name="productId" value="%{#session.productId}"/>
-	                <s:hidden name="productName" value="%{#session.productName}"/>
-	                <s:hidden name="productNameKana" value="%{#session.productNameKana}"/>
-	                <s:hidden name="imageFilePath" value="%{#session.imageFilePath}"/>
-	                <s:hidden name="imageFileName" value="%{#session.imageFileName}"/>
-	                <s:hidden name="price" value="%{#session.price}"/>
-	                <s:hidden name="releaseCompany" value="%{#session.releaseCompany}"/>
-	                <s:hidden name="releaseDate" value="%{#session.releaseDate}"/>
-                 	<s:hidden name="productDescription" value="%{#session.productDescription}"/>
-	                <div class="submit_btn_box">
-	                    <s:submit value="カートに追加" class="submit_btn" />
+		                購入個数<br>
+		                <s:select name="productCount" list="%{#session.productCountList}"/>
+		                <s:hidden name="productId" value="%{#session.productId}"/>
+	                    <s:hidden name="productName" value="%{#session.productName}"/>
+	                    <s:hidden name="productNameKana" value="%{#session.productNameKana}"/>
+	                    <s:hidden name="imageFilePath" value="%{#session.imageFilePath}"/>
+	                    <s:hidden name="imageFileName" value="%{#session.imageFileName}"/>
+	                    <s:hidden name="price" value="%{#session.price}"/>
+	                    <s:hidden name="releaseCompany" value="%{#session.releaseCompany}"/>
+	                    <s:hidden name="releaseDate" value="%{#session.releaseDate}"/>
+	                    <s:hidden name="productDescription" value="%{#session.productDescription}"/>
+	                    <div id="addCart-submit">
+	                        <s:submit value="カートに追加"/>
+	                    </div>
 	                </div>
 	            </div>
 	        </div>

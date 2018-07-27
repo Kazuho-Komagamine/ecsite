@@ -1,0 +1,12 @@
+#product-detail-container{
+	margin-bottom: 100px;
+}
+
+.item-image-box-350 {
+	height: 350px;
+	width: auto;
+}
+
+#addCart-submit{
+	text-align: center;
+}
