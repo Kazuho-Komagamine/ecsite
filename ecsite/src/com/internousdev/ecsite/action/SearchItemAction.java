@@ -131,4 +131,3 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 }
-
